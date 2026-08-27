@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Variable", "IBM Plex Sans", ui-sans-serif,
+    system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --color-canvas: #f3f5f6;
+  --color-sidebar: #f8f9fa;
+  --color-panel: #ffffff;
+  --color-ink: #182027;
+  --color-muted: #5f6b74;
+  --color-subtle: #6d7881;
+  --color-line: #dce1e5;
+  --color-line-strong: #c6cdd2;
+  --color-brand: #235f82;
+  --color-brand-soft: #e7f0f5;
+  --color-success: #2f7657;
+  --color-success-soft: #e7f3ec;
+  --color-warning: #8f6414;
+  --color-warning-soft: #faf1dd;
+  --color-danger: #a14543;
+  --color-danger-soft: #f7e9e8;
+  --color-info: #426985;
+  --color-info-soft: #e7eff5;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    min-width: 320px;
+    background: var(--color-canvas);
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button:disabled,
+  select:disabled,
+  input:disabled,
+  textarea:disabled {
+    cursor: not-allowed;
+  }
+
+  ::selection {
+    background: #c9dce7;
+    color: var(--color-ink);
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
